@@ -1,0 +1,752 @@
+CRITICAL - 2024-12-29 01:15:35 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "Logo Do&Done.png"
+[Method: GET, Route: Resources/Logo%20Do&Done.png]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('Resources/Logo Do&Done.png')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('Resources/Logo Do&Done.png')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+ERROR - 2024-12-29 05:09:03 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'foodmart', 3306, '', 0)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#15 {main}
+CRITICAL - 2024-12-29 05:09:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: signup/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignUp.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->process()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+ERROR - 2024-12-29 05:14:06 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'foodmart', 3306, '', 0)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#15 {main}
+CRITICAL - 2024-12-29 05:14:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: signup/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignUp.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->process()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+ERROR - 2024-12-29 05:14:43 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'foodmart', 3306, '', 0)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#15 {main}
+CRITICAL - 2024-12-29 05:14:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: signup/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignUp.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->process()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+ERROR - 2024-12-29 05:19:37 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'foodmart', 3306, '', 0)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmai...', 'email', Array, NULL, 'email')
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmai...', Array, Array, 'email')
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Controller.php(137): CodeIgniter\Validation\Validation->run()
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\SignUp.php(27): CodeIgniter\Controller->validate(Array)
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\SignUp->process()
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#15 {main}
+CRITICAL - 2024-12-29 05:19:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: POST, Route: signup/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('syakiraafn@gmail.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('email', 'email', 'syakiraafn@gmail.com', [...], [...], 'email')
+ 6 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignUp.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->process()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+CRITICAL - 2024-12-29 05:23:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "signup-form.php"
+[Method: POST, Route: signup/process]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup-form.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('signup-form', [], true)
+ 3 APPPATH\Controllers\SignUp.php(29): view('signup-form', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignUp->process()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignUp))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 05:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 05:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 05:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-29 06:01:37 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: submit-login]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(203): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('submit-login', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+ERROR - 2024-12-29 06:33:43 --> mysqli_sql_exception: Unknown column 'name' in 'field list' in C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT name FRO...', 0)
+#1 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FRO...')
+#2 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FRO...')
+#3 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Models\Login.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...')
+#4 C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\LoginController.php(17): App\Models\Login->getDataUsers('test2@gmail.com', '202cb962ac59075...')
+#5 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+#6 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#7 C:\Users\Syakira Fildza\Desktop\syakiratst\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\Syakira Fildza\Desktop\syakiratst\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\Syakira Fildza\Desktop\syakiratst\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\Syakira Fildza\Desktop\syakiratst\system\rewrite.php(44): require_once('C:\\Users\\Syakir...')
+#12 {main}
+CRITICAL - 2024-12-29 06:33:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+[Method: POST, Route: login/process]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 APPPATH\Models\Login.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"')
+ 2 APPPATH\Controllers\LoginController.php(17): App\Models\Login->getDataUsers('test2@gmail.com', '202cb962ac59075b964b07152d234b70')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+CRITICAL - 2024-12-29 06:33:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"')
+ 3 APPPATH\Models\Login.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"')
+ 4 APPPATH\Controllers\LoginController.php(17): App\Models\Login->getDataUsers('test2@gmail.com', '202cb962ac59075b964b07152d234b70')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+CRITICAL - 2024-12-29 06:33:43 --> [Caused by] mysqli_sql_exception: Unknown column 'name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"')
+ 4 APPPATH\Models\Login.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name FROM users WHERE
+                        email = "test2@gmail.com"
+                        AND password = "202cb962ac59075b964b07152d234b70"')
+ 5 APPPATH\Controllers\LoginController.php(17): App\Models\Login->getDataUsers('test2@gmail.com', '202cb962ac59075b964b07152d234b70')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+CRITICAL - 2024-12-29 06:38:14 --> ErrorException: Object of class stdClass could not be converted to int
+[Method: POST, Route: login/process]
+in APPPATH\Controllers\LoginController.php on line 18.
+ 1 APPPATH\Controllers\LoginController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class stdClass could not be converted to int', 'C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Controllers\\LoginController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 06:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:52:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-29 06:53:07 --> ErrorException: Undefined variable $results
+[Method: POST, Route: login/process]
+in APPPATH\Models\Login.php on line 17.
+ 1 APPPATH\Models\Login.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $results', 'C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Models\\Login.php', 17)
+ 2 APPPATH\Controllers\LoginController.php(18): App\Models\Login->getDataUsers('test2@gmail.com', '16d7a4fca7442dda3ad93c9a726597e4')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+CRITICAL - 2024-12-29 06:55:09 --> Error: Call to a member function getNumRows() on array
+[Method: POST, Route: login/process]
+in APPPATH\Models\Login.php on line 17.
+ 1 APPPATH\Controllers\LoginController.php(18): App\Models\Login->getDataUsers('test2@gmail.com', '16d7a4fca7442dda3ad93c9a726597e4')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 06:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-29 06:55:21 --> Error: Call to a member function getNumRows() on array
+[Method: POST, Route: login/process]
+in APPPATH\Models\Login.php on line 17.
+ 1 APPPATH\Controllers\LoginController.php(18): App\Models\Login->getDataUsers('test2@gmail.com', '16d7a4fca7442dda3ad93c9a726597e4')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 06:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:57:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 06:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:03:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-29 07:12:30 --> ArgumentCountError: Too few arguments to function App\Models\Login::getDataUsers(), 1 passed in C:\Users\Syakira Fildza\Desktop\syakiratst\app\Controllers\LoginController.php on line 18 and exactly 2 expected
+[Method: POST, Route: login/process]
+in APPPATH\Models\Login.php on line 7.
+ 1 APPPATH\Controllers\LoginController.php(18): App\Models\Login->getDataUsers('test2@gmail.com')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->login_action()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 07:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:15:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:23:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:25:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:28:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:28:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:32:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:32:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:35:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:37:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:39:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:48:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:48:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 07:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-29 08:01:29 --> ErrorException: Undefined variable $db
+[Method: GET, Route: todo]
+in APPPATH\Controllers\Todo.php on line 17.
+ 1 APPPATH\Controllers\Todo.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $db', 'C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Controllers\\Todo.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 08:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 08:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:08:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:12:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:16:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:21:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-29 09:25:34 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 162.
+ 1 APPPATH\Views\todo.php(162): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:25:34 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 162.
+ 1 APPPATH\Views\todo.php(162): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:25:34 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 162.
+ 1 APPPATH\Views\todo.php(162): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 09:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-29 09:26:42 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 162.
+ 1 APPPATH\Views\todo.php(162): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:26:42 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 162.
+ 1 APPPATH\Views\todo.php(162): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:26:42 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 162.
+ 1 APPPATH\Views\todo.php(162): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 09:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-29 09:36:15 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:36:15 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:36:15 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 09:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-29 09:36:26 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:36:26 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:36:26 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 09:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:36:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-29 09:36:37 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+WARNING - 2024-12-29 09:36:37 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 09:36:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2024-12-29 09:36:48 --> [DEPRECATED] htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in APPPATH\Views\todo.php on line 182.
+ 1 APPPATH\Views\todo.php(182): htmlspecialchars(null)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\app\\Views\\todo.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('todo', [], true)
+ 5 APPPATH\Controllers\Todo.php(23): view('todo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todo->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todo))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Syakira Fildza\\Desktop\\syakiratst\\public\\index.php')
+INFO - 2024-12-29 09:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 09:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-29 15:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
